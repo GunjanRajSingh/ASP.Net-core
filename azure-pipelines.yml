@@ -2,21 +2,27 @@ trigger:
   - main
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'windows-2025'
 
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+  - name: solution
+    value: '**/*.sln'
+  - name: buildPlatform
+    value: 'Any CPU'
+  - name: buildConfiguration
+    value: 'Release'
 
 steps:
 - task: NuGetToolInstaller@1
+  displayName: NuGet Install
 
 - task: NuGetCommand@2
+  displayName: NuGet Restore
   inputs:
     restoreSolution: '$(solution)'
 
 - task: VSBuild@1
+  displayName: Visual Studio build
   inputs:
     solution: '$(solution)'
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
@@ -24,11 +30,13 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: VSTest@2
+  displayName: Visual Studio Test
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
 - task: VSTest@2
+  displayName: Compile DLL Files
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
@@ -39,6 +47,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: PublishBuildArtifacts@1
+  displayName: Publish Artifacts
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'Gunjan_Artifacts'
