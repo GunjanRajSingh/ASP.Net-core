@@ -7,7 +7,7 @@ trigger:
   - main
 
 pool:
-  name: WebApp
+  vmImage: 'windows-latest'
 
 variables:
   solution: '**/*.sln'
