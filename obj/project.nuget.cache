@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "dgSpecHash": "po+77swJlRE=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\monik\\Downloads\\VSCode\\WebApp-ASP.Net-core2\\ASP.Net-core\\WebApp-ASP.Net core.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Microsoft.NETCore.App.Ref (= 6.0.36)' for 'net6.0'.",
+      "projectPath": "C:\\Users\\monik\\Downloads\\VSCode\\WebApp-ASP.Net-core2\\ASP.Net-core\\WebApp-ASP.Net core.csproj",
+      "filePath": "C:\\Users\\monik\\Downloads\\VSCode\\WebApp-ASP.Net-core2\\ASP.Net-core\\WebApp-ASP.Net core.csproj",
+      "libraryId": "Microsoft.NETCore.App.Ref",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Microsoft.WindowsDesktop.App.Ref (= 6.0.36)' for 'net6.0'.",
+      "projectPath": "C:\\Users\\monik\\Downloads\\VSCode\\WebApp-ASP.Net-core2\\ASP.Net-core\\WebApp-ASP.Net core.csproj",
+      "filePath": "C:\\Users\\monik\\Downloads\\VSCode\\WebApp-ASP.Net-core2\\ASP.Net-core\\WebApp-ASP.Net core.csproj",
+      "libraryId": "Microsoft.WindowsDesktop.App.Ref",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Microsoft.AspNetCore.App.Ref (= 6.0.36)' for 'net6.0'.",
+      "projectPath": "C:\\Users\\monik\\Downloads\\VSCode\\WebApp-ASP.Net-core2\\ASP.Net-core\\WebApp-ASP.Net core.csproj",
+      "filePath": "C:\\Users\\monik\\Downloads\\VSCode\\WebApp-ASP.Net-core2\\ASP.Net-core\\WebApp-ASP.Net core.csproj",
+      "libraryId": "Microsoft.AspNetCore.App.Ref",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Microsoft.NETCore.App.Host.win-x64 (= 6.0.36)' for 'net6.0'.",
+      "projectPath": "C:\\Users\\monik\\Downloads\\VSCode\\WebApp-ASP.Net-core2\\ASP.Net-core\\WebApp-ASP.Net core.csproj",
+      "filePath": "C:\\Users\\monik\\Downloads\\VSCode\\WebApp-ASP.Net-core2\\ASP.Net-core\\WebApp-ASP.Net core.csproj",
+      "libraryId": "Microsoft.NETCore.App.Host.win-x64",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}
