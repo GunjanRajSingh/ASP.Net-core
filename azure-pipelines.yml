@@ -47,3 +47,6 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'Gunjan_Artifacts'
     publishLocation: 'Container'
+
+
+
