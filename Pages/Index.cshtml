@@ -1,10 +1,36 @@
-﻿@page
-@model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to Azure DevOps Page Practice Session by AAG- 20/Aug</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4 text-primary">🚀 Welcome to My ASP.NET Core App</h1>
+        <p class="lead mt-3">
+            This is your modern web application built with <strong>ASP.NET Core MVC</strong>.  
+            Use this template to quickly build scalable and secure applications.
+        </p>
+    </div>
+
+    <hr />
+
+    <div class="row text-center mt-5">
+        <div class="col-md-4">
+            <h3>🌐 Fast & Modern</h3>
+            <p>Built with the latest .NET Core framework ensuring high performance and cross-platform support.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>🔒 Secure by Default</h3>
+            <p>Includes authentication, authorization, and configuration best practices out of the box.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>⚡ Easy to Customize</h3>
+            <p>Clean architecture and modular design allow you to add features as per your business needs.</p>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a class="btn btn-primary btn-lg" asp-controller="Home" asp-action="About">Learn More</a>
+        <a class="btn btn-outline-success btn-lg" asp-controller="Home" asp-action="Contact">Contact Us</a>
+    </div>
 </div>
+
