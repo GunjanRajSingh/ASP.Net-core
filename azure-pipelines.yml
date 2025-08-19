@@ -22,7 +22,7 @@ steps:
     restoreSolution: '$(solution)'
 
 - task: VSBuild@1
-  displayName: Visual Studio build
+  displayName: Visual Studio Build
   inputs:
     solution: '$(solution)'
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
@@ -32,12 +32,6 @@ steps:
 - task: VSTest@2
   displayName: Visual Studio Test
   inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  displayName: Compile DLL Files
-  inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
       **\bin\**\*test.dll
@@ -45,6 +39,7 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
 
 - task: PublishBuildArtifacts@1
   displayName: Publish Artifacts
